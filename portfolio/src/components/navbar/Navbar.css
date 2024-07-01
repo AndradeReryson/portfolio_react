@@ -1,0 +1,100 @@
+
+@keyframes fadeIn {
+    0% {
+        height: 10px;
+        width: 0%;
+    }
+
+    100%{
+        height: 10px;
+        width: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        height: 10px;
+        width: 100%;
+    }
+
+    100%{
+        height: 10px;
+        width: 0%;
+    }
+}
+
+@keyframes navbarGrowDown{
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        height: 10vh;
+        opacity: 1;
+    }
+}
+
+.Navbar{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid white;
+    background-color: var(--azul-escuro-500);
+    align-items: center;
+    z-index: 10;
+    /**/
+    overflow: hidden;
+    height: 0vh;
+    animation: navbarGrowDown 1s ease-in-out 1s forwards;
+}
+
+    .navbarLogo{
+        width: 100%;
+        display: "flex";
+        justify-content: "flex-start";
+    }
+
+    .navbarBotoes{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    .navbarBotoes a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .navbarBotoes a.selected::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        left: 0;
+        bottom: 0;
+        background-color: var(--azul-normal);
+        animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+    /* Animação quando tirar o .selected  */
+    .navbarBotoes a::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 10px;
+        left: 0;
+        bottom: 0;
+        background-color: var(--azul-normal);
+        animation: fadeOut 0.5s ease-in-out forwards;
+        transition: 1s; 
+    }

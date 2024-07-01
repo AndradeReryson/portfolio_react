@@ -1,0 +1,15 @@
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 15vh 5vw 0 5vw;
+    margin-bottom: 2vh;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+    .Container:last-child{
+        margin-bottom: 0;
+    }
