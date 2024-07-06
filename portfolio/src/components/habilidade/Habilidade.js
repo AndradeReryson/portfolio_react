@@ -58,7 +58,7 @@ const Habilidade = ({nome, animationDelay}) => {
 	}
 
   return (
-    <div className='cardHabilidade' data-animation-delay={""+animationDelay}>
+    <div className='cardHabilidade'>
       <img src={getImageSource(nome)} alt={"icone que representa "+nome}/>
       <h6>{nome}</h6>
     </div>

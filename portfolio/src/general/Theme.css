@@ -1,6 +1,6 @@
 :root{
-    --azul-escuro-500: #0D0221;
-    --azul-escuro-400: #08042D;
+    --azul-escuro-500: #080116;
+    --azul-escuro-400: #0D0221;
     --azul-normal: #26408B;
     --azul-claro: #A6CFD5;
     --preto: #0E0E10;
@@ -8,8 +8,8 @@
 
     --iconePreto: brightness(0) saturate(100%);
     --iconeBranco: contrast(0) brightness(100);
-    --iconeAzulEscuro400: invert(9%) sepia(24%) saturate(3284%) hue-rotate(221deg) brightness(89%) contrast(116%);
-    --iconeAzulEscuro500: invert(4%) sepia(32%) saturate(5706%) hue-rotate(252deg) brightness(95%) contrast(107%);
+    --iconeAzulEscuro400: invert(6%) sepia(49%) saturate(2055%) hue-rotate(239deg) brightness(90%) contrast(110%);
+    --iconeAzulEscuro500: invert(7%) sepia(9%) saturate(6405%) hue-rotate(228deg) brightness(69%) contrast(109%);
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;

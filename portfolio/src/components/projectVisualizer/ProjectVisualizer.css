@@ -1,0 +1,62 @@
+@keyframes fadeIn {
+    0%{
+        transform: translateX(30px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+  
+    100%{
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(30px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+  
+}
+
+.ProjectVisualizer{
+    height: 50vh;
+    width: 35vw;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+}
+
+    .ProjectVisualizer.fadeOut{
+        animation: fadeOut 0.5s ease-in-out 0s forwards;
+    }
+
+    .ProjectVisualizer.fadeIn{
+        animation: fadeIn 0.5s ease-in-out 0s forwards;
+    }
+
+    .fundoNotebook{
+        left: 0;
+        top: 0;
+        position: absolute;
+        filter: var(--iconeBranco);
+        width: 35vw;
+        height: 50vh;
+    }
+
+    .printProjeto{
+        left: 4.1vw;
+        top: 3.1vh;
+        position: absolute;
+        width: 27.5vw;
+        height: 33vh;
+    }
+

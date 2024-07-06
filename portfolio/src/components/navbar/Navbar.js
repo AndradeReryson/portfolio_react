@@ -10,8 +10,16 @@ const Navbar = () => {
     const BTN_NAV_SOBRE = document.getElementById('link_sobre');
     const BTN_NAV_FORMACAO = document.getElementById('link_formacao');
     const BTN_NAV_HABILIDADES = document.getElementById('link_habilidades');
+    const BTN_NAV_PROJETOS = document.getElementById('link_projetos');
+    const BTN_NAV_CONTATO = document.getElementById('link_contato');
 
-    const ARRAY_BUTTONS = [BTN_NAV_SOBRE, BTN_NAV_FORMACAO, BTN_NAV_HABILIDADES];
+    const ARRAY_BUTTONS = [
+      BTN_NAV_SOBRE, 
+      BTN_NAV_FORMACAO, 
+      BTN_NAV_HABILIDADES,
+      BTN_NAV_PROJETOS,
+      BTN_NAV_CONTATO
+    ];
 
 		const handleScrollNav = (e) => {
       setScroll(window.scrollY);
@@ -44,6 +52,24 @@ const Navbar = () => {
 
         BTN_NAV_HABILIDADES.classList.add('selected')
       }
+
+      /* Projetos */
+      if(scroll >= 2000 && scroll <= 3000){
+        for (let btn of ARRAY_BUTTONS) {
+          btn.classList.remove('selected')
+        }
+
+        BTN_NAV_PROJETOS.classList.add('selected')
+      }
+
+      /* Contato */
+      if(scroll >= 3000){
+        for (let btn of ARRAY_BUTTONS) {
+          btn.classList.remove('selected')
+        }
+
+        BTN_NAV_CONTATO.classList.add('selected')
+      }
       
 		}
 
@@ -71,6 +97,18 @@ const Navbar = () => {
     dispatchEvent(new CustomEvent('scroll'))
   }
 
+  const scrollToProjetos = (e) => {
+    e.preventDefault();
+    window.scrollTo({top: 2200, behavior: 'smooth'});
+    dispatchEvent(new CustomEvent('scroll'))
+  }
+
+  const scrollToContato = (e) => {
+    e.preventDefault();
+    window.scrollTo({top: 3100, behavior: 'smooth'});
+    dispatchEvent(new CustomEvent('scroll'))
+  }
+
   useEffect(() => {
 
   }, [])
@@ -81,11 +119,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbarBotoes">
-        <a id="link_sobre" href="#secaoApresentação" onClick={scrollToSobre} className='font-h6 link'>Sobre</a>
+        <a id="link_sobre" href="#secaoApresentação" onClick={scrollToSobre} className='font-h6 link selected'>Sobre</a>
         <a id="link_formacao" href="#secaoFormacao" onClick={scrollToFormacao} className='font-h6 link'>Formação</a>
         <a id="link_habilidades" href="#secaoHabilidades" onClick={scrollToHabilidades} className='font-h6 link'>Habilidades</a>
-        <a id="link_projetos" href="#secaoProjetos" className='font-h6 link'>Projetos</a>
-        <a id="link_contato" href="#secaoContato" className='font-h6 link'>Contato</a>
+        <a id="link_projetos" href="#secaoProjetos" onClick={scrollToProjetos} className='font-h6 link'>Projetos</a>
+        <a id="link_contato" href="#secaoContato" onClick={scrollToContato} className='font-h6 link'>Contato</a>
       </div>
     </div>
   )

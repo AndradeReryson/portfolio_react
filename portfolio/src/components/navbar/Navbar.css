@@ -42,8 +42,8 @@
     padding: 0 5vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 2px solid white;
-    background-color: var(--azul-escuro-500);
+    box-shadow: 1px 1px 3px var(--preto);
+    background-color: var(--azul-escuro-400);
     align-items: center;
     z-index: 10;
     /**/

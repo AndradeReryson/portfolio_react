@@ -1,0 +1,64 @@
+@keyframes fadeIn {
+    0%{
+        transform: translateX(30px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+  
+    100%{
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        transform: translateX(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(30px);
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+  
+}
+
+.ButtonProjeto{
+    padding: 5px 15px;
+    border: 1px solid var(--branco);
+    border-radius: 25px;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+    .ButtonProjeto.fadeOut{
+        animation: fadeOut 0.5s ease-in-out forwards;
+    }
+
+    .ButtonProjeto.fadeIn{
+        animation: fadeIn 0.5s ease-in-out forwards;
+    }
+
+        .ButtonProjeto.fadeIn:nth-child(1){ animation-delay: 0s;}
+        .ButtonProjeto.fadeIn:nth-child(2){ animation-delay: 0.15s;}
+        .ButtonProjeto.fadeIn:nth-child(3){ animation-delay: 0.30s;}
+        .ButtonProjeto.fadeIn:nth-child(4){ animation-delay: 0.45s;}
+
+    .ButtonProjeto h6{
+        pointer-events: none;
+    }
+
+        .ButtonProjeto.selected{
+            background-color: var(--branco);
+        }
+
+        .ButtonProjeto.selected h6{
+            color: var(--azul-escuro-500);
+            font-weight: bold;
+            pointer-events: none;
+        }
