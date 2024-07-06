@@ -137,12 +137,17 @@
         clear: both;
     }
 
+        .cardFormacao .formacaoDescricao h6{
+            line-height: 25px;
+        }
+
         .cardFormacao .formacaoDescricao ul{
             width: 100%;
         }
 
         .cardFormacao .formacaoDescricao ul li{
             margin: 5px 20px;
+            line-height: 25px;
         }
     
 .slideDown{

@@ -34,11 +34,11 @@ const ProjectVisualizer = ({idProjeto = 0}) => {
 
     for(let i = 0; i < arrImagens[idProjeto].length; i++){
       if(i === 0){
-        lista_imgs.push(<img src={arrImagens[idProjeto][i]} className='printProjeto ' alt="print da tela do projeto selecionado"/>)
+        lista_imgs.push(<img key={i} src={arrImagens[idProjeto][i]} className='printProjeto ' alt="print da tela do projeto selecionado"/>)
         continue;
       }
 
-      lista_imgs.push(<img src={arrImagens[idProjeto][i]} className='printProjeto' alt="print da tela do projeto selecionado"/>)
+      lista_imgs.push(<img key={i} src={arrImagens[idProjeto][i]} className='printProjeto' alt="print da tela do projeto selecionado"/>)
     };
 
     return lista_imgs;

@@ -22,7 +22,7 @@ const ButtonLink = ({className = "", nome = "placeholder", icone = "figma", href
   }
 
   return (
-    <a className='ButtonLinkAnchor link' target="_blank" href={href}>
+    <a className='ButtonLinkAnchor link' target="_blank" rel="noreferrer" href={href}>
       <div className="ButtonLink">
         <img className="ButtonLinkImg" src={getIconeByName(icone)} alt="icone do botão"/>
         <h6 className="link">{nome}</h6>

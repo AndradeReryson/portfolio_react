@@ -2,7 +2,7 @@ import React from 'react'
 import './Perfil.css'
 import '../../general/Theme.css'
 import '../../general/Contraste-Theme.css'
-import Profile from '../../assets/profile_placeholder.png'
+import Profile from '../../assets/profile_pic.png'
 
 const Perfil = () => {
   return (

@@ -8,7 +8,7 @@ import Fundo03 from '../../assets/portfolio_fundo_03.svg';
 import Fundo04 from '../../assets/portfolio_fundo_04.svg';
 import Fundo05 from '../../assets/portfolio_fundo_05.svg';
 
-const ImagemFundo = ({className, numFundo, width, height, left, bottom}) => {
+const ImagemFundo = ({className="", numFundo="01", width="auto", height="auto", left="auto", bottom="auto"}) => {
 	
 	const getFundoByNumero = (numero) => {
 		switch(numero){
@@ -43,11 +43,4 @@ const ImagemFundo = ({className, numFundo, width, height, left, bottom}) => {
   )
 }
 
-ImagemFundo.defaultProps = {
-	numFundo: "01",
-	width: "auto",
-	height: "auto",
-	left: "auto",
-	bottom: "auto"
-}
 export default ImagemFundo

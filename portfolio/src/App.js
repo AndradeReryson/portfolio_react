@@ -61,7 +61,7 @@ function App() {
               <h6> Projeto Integrador do 2º Semestre da Faculdade </h6>
               <br/>
               <h6> O website Battle String consiste em um jogo para treinar a digitação. </h6>
-              <ul class="font-h6" style={{textAlign: "left"}}>
+              <ul className="font-h6" style={{textAlign: "left"}}>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}>No modo Singleplayer, o jogador tem acesso a diversos textos, onde o seu objetivo é digitar todo o texto o mais rápido possível evitando errar. </li>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}>Já no modo Multiplayer, o jogador compete com outros jogadores em partidas de 5 minutos. A cada 10 segundos é enviada uma palavra, o jogador recebe pontos por cada letra e um bônus caso digite toda a palavra corretamente. </li>
               </ul>
@@ -83,7 +83,7 @@ function App() {
               <h6> O website Tech Recycle oferece uma plataforma para implementar um Programa de fidelidade.</h6>
               
               <h6> Clientes de lojas parceiras recebem pontos ao descartar eletrônicos nos estabelecimentos. Na plataforma, os pontos podem ser trocados por descontos e benefícios nas lojas disponíveis.</h6>
-              <ul class="font-h6" style={{textAlign: "left"}}>
+              <ul className="font-h6" style={{textAlign: "left"}}>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}>Os Clientes podem ver pontos de descarte, pesquisar e resgatar promoções nas lojas parceiras;</li>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}>As Lojas possuem um dashboard onde podem gerenciar suas promoções e lançar os pontos aos clientes.</li>
               </ul>
@@ -104,7 +104,7 @@ function App() {
               <br/>
               <h6> O website Code Crumbs busca gamificar o ensino na área de programação.</h6>
               <h6> O Code Crumbs oferece três tipos diferentes de exercicios, para que os usuários pratiquem a programação e memorizem conceitos: </h6>
-              <ul class="font-h6" style={{textAlign: "left"}}>
+              <ul className="font-h6" style={{textAlign: "left"}}>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}> <ins>Quizzes</ins>: São testes de perguntas e respostas. O usuário também pode criar seus próprios quizzes; </li>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}> <ins>Preencher Lacunas</ins>: É dado ao usuário um trecho de código com lacunas e ele deve preencher com a resposta correta; </li>
                 <li style={{marginBottom: "15px", lineHeight: "25px"}}> <ins>FlashCards</ins>: São os famosos "Cartões de Memorização", o usuário pode criar seus próprios cartões e visualizá-los na plataforma </li>
@@ -134,7 +134,28 @@ function App() {
 
 		const handleScroll = (e) => {
       setScroll(window.scrollY);
-			console.log("Scroll: "+window.scrollY);
+			//console.log("Scroll: "+window.scrollY);
+
+      /** Vamos descobrir todas as coordenadas de cada Seção com base na sua Div */
+      const SECC_01 = document.getElementById('secaoApresentação').getBoundingClientRect();
+      const SECC_02 = document.getElementById('secaoFormacao').getBoundingClientRect();
+      const SECC_03 = document.getElementById('secaoHabilidades').getBoundingClientRect();
+      const SECC_04 = document.getElementById('secaoProjetos').getBoundingClientRect();
+      const SECC_05 = document.getElementById('secaoContato').getBoundingClientRect();
+
+      /** Agora, vamos pegar o valor do topo de cada secao e somar com o quanto ja scrollamos */
+      const COORD_TOP_SECC_01 = (SECC_01.top + window.scrollY)
+      const COORD_TOP_SECC_02 = (SECC_02.top + window.scrollY )
+      const COORD_TOP_SECC_03 = (SECC_03.top + window.scrollY)
+      const COORD_TOP_SECC_04 = (SECC_04.top + window.scrollY)
+      const COORD_TOP_SECC_05 = (SECC_05.top + window.scrollY)
+
+      /** Por fim, vamos arredondar o valor para um numero inteiro redondo (ex: ao inves de 717, queremos 700) */
+      const SCROLL_01 = Math.floor(COORD_TOP_SECC_01 / 100) * 100;
+      const SCROLL_02 = Math.floor(COORD_TOP_SECC_02 / 100) * 100;
+      const SCROLL_03 = Math.floor(COORD_TOP_SECC_03 / 100) * 100;
+      const SCROLL_04 = Math.floor(COORD_TOP_SECC_04 / 100) * 100;
+      const SCROLL_05 = Math.floor(COORD_TOP_SECC_05/ 100) * 100;
 
       const FUNDO_01 =  document.getElementById('fundo01');
       const FUNDO_02 =  document.getElementById('fundo02');
@@ -153,7 +174,7 @@ function App() {
 
 
 			/** PERFIL */
-			if(scroll <= 300){
+			if(scroll <= (SCROLL_02 - 200)){
         FUNDO_01.classList.remove("fadeOut");
 				FUNDO_01.classList.add("fadeIn");
 
@@ -163,7 +184,7 @@ function App() {
       }
 
       /** FORMAÇÃO */
-      if(scroll >= 400 && scroll <= 1000){
+      if(scroll > (SCROLL_02 - 200) && scroll <= (SCROLL_03 - 200)){
         FUNDO_02.classList.remove("fadeOut");
 				FUNDO_02.classList.add("fadeIn");
 
@@ -183,7 +204,7 @@ function App() {
       }
 
       /** HABILIDADES */
-      if(scroll >= 1200 && scroll <= 1900){
+      if(scroll >= (SCROLL_03 - 200) && scroll <= (SCROLL_04 - 200)){
         FUNDO_03.classList.remove("fadeOut");
 				FUNDO_03.classList.add("fadeIn");
 
@@ -202,7 +223,7 @@ function App() {
       }
 
       /** PROJETOS */
-      if(scroll >= 2000 && scroll < 2800){
+      if(scroll >= (SCROLL_04 - 200) && scroll <= (SCROLL_05 - 200)){
         FUNDO_04.classList.remove("fadeOut");
 				FUNDO_04.classList.add("fadeIn");
 
@@ -244,7 +265,7 @@ function App() {
       }
 
       /** CONTATO */
-      if(scroll >= 2900){
+      if(scroll >= (SCROLL_05 - 200)){
         FUNDO_05.classList.remove("fadeOut");
 				FUNDO_05.classList.add("fadeIn");
 
@@ -279,19 +300,19 @@ function App() {
       </Container>
 
       <Container id="secaoFormacao" flexDirection="column">
-        <ImagemFundo numFundo="02"  width="100%"/>
+        <ImagemFundo numFundo="02" height='100%'/>
         <h3 className="secaoTitulo"> Formação Acadêmica </h3>
 
         <Formacao id="formacao01" className="fadeOut">
-          <h5> Ensino Médio integrado ao Técnico (ETIM) </h5>
+          <h5> Ensino Médio integrado ao Técnico em Administração (ETIM) </h5>
           <h5> Etec São Mateus (02/2017 - 11/2019)</h5>
-          <h6> Nessa época eu ainda não sabia em qual área eu queria me profissionalizar, então decidi fazer este curso, pois poderia ser uma porta de entrada para outras áreas relacionadas (Gestão de Empresas, Contabilidade, Recursos Humanos, Logistíca etc.)</h6>
-          <h6> Meu principal desenvolvimento foram nas Soft Skills, sendo elas: </h6>
+          <h6> Nessa época eu ainda não sabia em qual área eu queria me profissionalizar, então decidi fazer este curso, pois poderia ser uma porta de entrada para outras áreas relacionadas (Gestão de Empresas, Contabilidade, Recursos Humanos, Logística etc.)</h6>
+          <h6> Meu principal desenvolvimento foram as Soft Skills, sendo elas: </h6>
           <ul className='font-h6'>
             <li>Comunicação; </li>
             <li>Trabalho em Equipe; </li>
             <li>Organização; </li>
-            <li>Pensamento Crítico</li>
+            <li>Pensamento Crítico.</li>
           </ul>
         </Formacao>
 
@@ -328,7 +349,7 @@ function App() {
         <h4 className="secaoTitulo"> Habilidades </h4>
 
         <h5> Hard Skills </h5>
-        <div class="listaHardSkills">
+        <div className="listaHardSkills">
           <Habilidade nome="HTML"/>
           <Habilidade nome="CSS"/>
           <Habilidade nome="JavaScript"/>
@@ -342,7 +363,7 @@ function App() {
         </div>
 
         <h5> Soft Skills </h5>
-        <div class="listaSoftSkills">
+        <div className="listaSoftSkills">
           <Habilidade nome="Proatividade" />
           <Habilidade nome="Comunicação" />
           <Habilidade nome="Trabalho em Equipe" />
