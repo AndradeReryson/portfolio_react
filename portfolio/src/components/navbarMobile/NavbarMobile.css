@@ -10,7 +10,8 @@
     }
 }
 
-.NavbarMobile{
+.NavbarMobile,
+.navbarBotoesMobile{
     display: none;
 }
 
@@ -33,6 +34,7 @@
     }
 
     .navbarBotoesMobile{
+        display: inline-block;
         position: fixed;
         top: 10dvh;
         right: 0px;
