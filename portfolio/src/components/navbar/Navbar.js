@@ -151,7 +151,7 @@ const Navbar = () => {
 
       <div className="navbarBotoes">
         <a id="link_sobre" href="#secaoApresentação" onClick={scrollToSobre} className='font-h6 link selected'>Sobre</a>
-        <a id="link_formacao" onClick={scrollToFormacao} className='font-h6 link'>Formação</a>
+        <a id="link_formacao" href="#secaoFormacao" onClick={scrollToFormacao} className='font-h6 link'>Formação</a>
         <a id="link_habilidades" href="#secaoHabilidades" onClick={scrollToHabilidades} className='font-h6 link'>Habilidades</a>
         <a id="link_projetos" href="#secaoProjetos" onClick={scrollToProjetos} className='font-h6 link'>Projetos</a>
         <a id="link_contato" href="#secaoContato" onClick={scrollToContato} className='font-h6 link'>Contato</a>
