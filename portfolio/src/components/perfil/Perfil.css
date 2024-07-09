@@ -89,6 +89,22 @@
         text-align: center;
     }
 
+        .cardPerfil .perfilFoto{
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /**/
+            opacity: 0;
+            animation: fadeInFromTopRotating 0.7s ease-out 1s forwards;
+        }
+
+            .cardPerfil .perfilFoto img{
+                width: 150px;
+                border-radius: 50%;
+            }
+
         .cardPerfil .perfilDescricao{
             gap: 10px;
         }

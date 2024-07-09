@@ -197,5 +197,9 @@
             .cardFormacao .formacaoDescricao h6{
                 line-height: 5dvw;
             }
+
+            .cardFormacao .formacaoDescricao ul{
+                padding: 0 30px;
+            }
     
 }

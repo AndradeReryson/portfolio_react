@@ -1,9 +1,135 @@
+@keyframes navbarGrowDown{
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+
+    100% {
+        height: 10vh;
+        opacity: 1;
+    }
+}
+
 .NavbarMobile{
     display: none;
 }
 
 @media only screen and (max-width: 480px) {
     .NavbarMobile{
-        display: fixed;
+        display: inline-block;
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 5vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 1px 1px 3px var(--preto);
+        background-color: var(--azul-escuro-400);
+        align-items: center;
+        z-index: 10;
+        /**/
+        overflow-x: hidden;
+        height: 10dvh;
     }
+
+    .navbarBotoesMobile{
+        position: fixed;
+        top: 10dvh;
+        right: 0px;
+        width: auto;
+        height: auto;
+        display: flex;
+        
+        flex-direction: column;
+        padding: 5dvw;
+        background-color: var(--azul-escuro-400);
+        box-shadow: 1px 1px 3px var(--preto);
+        justify-content: flex-end;
+        align-items: center;
+        
+        gap: 6dvw;
+        z-index: 11;
+    }
+
+        .navbarBotoesMobile.aberto{
+            height: auto;
+        }
+
+            .navbarBotoesMobile.aberto a{
+                height: auto;
+            }
+
+        .navbarBotoesMobile.fechado{
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+            .navbarBotoesMobile.fechado a{
+                height: 0;
+                overflow: hidden;
+            }
+
+        .navbarBotoesMobile a{
+            align-self: flex-end;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+    .btnFecharNavMobile.fechado{
+        grid-column: 2 / 3;
+        justify-self: flex-end;
+        height: 7.5dvw;
+        width: 10dvw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5dvw 1.5dvw 1.5dvw;
+        row-gap: 1.5dvw;
+        cursor: pointer;
+    }
+        
+        .btnFecharNavMobile.fechado .iconeBarra{
+            height: auto;
+            width: 100%;
+            background-color: var(--branco);
+        }
+
+    .btnFecharNavMobile.aberto{
+        grid-column: 2 / 3;
+        justify-self: flex-end;
+        height: 10dvw;
+        width: 10dvw;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .btnFecharNavMobile.aberto .iconeBarra:nth-child(1){
+            position: absolute;
+            top: calc(5dvw - 0.75dvw);
+            left: calc(5dvh - 70%);
+            transform: rotate(45deg);
+            height: 1dvw;
+            width: 90%;
+            background-color: var(--branco);
+        }
+
+        .btnFecharNavMobile.aberto .iconeBarra:nth-child(2){
+            position: absolute;
+            top: calc(5dvw - 0.75dvw);
+            left: calc(5dvh - 70%);
+            transform: rotate(-45deg);
+            height: 1dvw;
+            width: 90%;
+            background-color: var(--branco);
+        }
+
+        .btnFecharNavMobile.aberto .iconeBarra:nth-child(3){
+            height: 0;
+            width: 0;
+        }
+
+
 }

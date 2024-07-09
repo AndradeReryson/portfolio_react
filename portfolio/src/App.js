@@ -2,6 +2,7 @@ import './general/Theme.css'
 import './App.css';
 import Container from './components/container/Container';
 import Navbar from './components/navbar/Navbar';
+import NavbarMobile from './components/navbarMobile/NavbarMobile';
 import Formacao from './components/formacao/Formacao';
 import Perfil from './components/perfil/Perfil';
 import ImagemFundo from './components/imagemFundo/ImagemFundo';
@@ -294,6 +295,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <NavbarMobile />
       <Container id="secaoApresentação" flexDirection="column">
         <ImagemFundo className="fadeIn" numFundo="01" left={100} height="100%"/>
         <Perfil />

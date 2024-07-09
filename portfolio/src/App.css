@@ -159,6 +159,10 @@
 			text-align: center;
 		}
 
+			.wrapperVisualizer .descricaoProjeto ul{
+				padding: 0 30px;
+			}
+
 			.wrapperVisualizer .descricaoProjeto h6{
 				margin-bottom: 15px;
 				line-height: 25px;

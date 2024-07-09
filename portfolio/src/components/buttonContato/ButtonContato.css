@@ -69,4 +69,19 @@
     .ButtonContato{
         gap: 5dvw;
     }
+
+    .ButtonContato{
+        width: 50%;
+        display: grid;
+        grid-template-rows: 50px;
+        grid-template-columns: 50px auto;
+        gap: 2vw;
+        align-items: center;
+        opacity: 0;
+    }
+
+        .ButtonContato img{
+            width: 50px;
+            height: 50px;
+        }
 }

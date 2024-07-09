@@ -63,3 +63,14 @@
             font-weight: bold;
             pointer-events: none;
         }
+
+@media only screen and (max-width: 480px){
+    .ButtonProjeto{
+        padding: 5px 15px;
+        border: 1px solid var(--branco);
+        border-radius: 25px;
+        user-select: none;
+        cursor: pointer;
+        opacity: 0;
+    }
+}
