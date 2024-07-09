@@ -29,7 +29,7 @@ const ButtonContato = ({icone = "", texto = "Placeholder", href="#"}) => {
       <img src={getIconeButton(icone)} alt="icone referente a forma de contato"/>
 			{
 				href === "#" 
-					? <h6 className="ButtonContatoLink link">{texto}</h6>
+					? <h6 className="link">{texto}</h6>
 					: <a className='link' target="_blank" href={href}><h6 className="ButtonContatoLink link">{texto}</h6></a>
 			}
       

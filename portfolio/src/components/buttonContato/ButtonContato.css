@@ -59,3 +59,14 @@
         text-wrap: nowrap;
         white-space: nowrap;
     }
+
+    .ButtonContatoLink{
+        text-decoration: underline;
+        color: var(--azul-claro);
+    }
+
+@media only screen and (max-width: 480px){
+    .ButtonContato{
+        gap: 5dvw;
+    }
+}

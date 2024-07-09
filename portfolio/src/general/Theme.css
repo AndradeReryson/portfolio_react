@@ -1,8 +1,8 @@
 :root{
     --azul-escuro-500: #080116;
     --azul-escuro-400: #0D0221;
-    --azul-normal: #26408B;
-    --azul-claro: #A6CFD5;
+    --azul-normal: #3152b4;
+    --azul-claro: #665efb;
     --preto: #0E0E10;
     --branco: #ffffff;
 
@@ -102,3 +102,43 @@ h6,
 .link:active, .link:visited{
     text-decoration: none;
 }
+
+@media only screen and (max-width: 480px) {
+    h1,
+    .font-h1{
+        font-weight: 400;
+        font-size: 12dvw;
+    }
+
+    h2,
+    .font-h2{
+        font-weight: 400;
+        line-height: 7dvw;
+        font-size: 7dvw;
+    }
+
+    h3,
+    .font-h3{
+        font-weight: 400;
+        font-size: 6.5dvw;
+    }
+
+    h4,
+    .font-h4{
+        font-weight: 400;
+        font-size: 6dvw;
+    }
+
+    h5,
+    .font-h5{
+        font-weight: 500;
+        font-size: 4.8dvw;
+    }
+
+    h6,
+    .font-h6{
+        font-weight: 400;
+        font-size: 4dvw;
+    }
+}
+

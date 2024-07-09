@@ -158,3 +158,44 @@
     animation: slideUp 0.5s ease-out forwards;
     transition: 1s;
 }
+
+@media only screen and (max-width: 480px) {
+    .cardFormacao{
+        width: 70%;
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        margin-bottom: 10vh;
+        /**/
+        opacity: 0;
+        overflow-y: hidden;
+    }
+
+        .cardFormacao .formacaoIcone{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardFormacao .formacaoDescricao{
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            gap: 15px;
+            clear: both;
+        }
+
+            .cardFormacao .formacaoDescricao h5{
+                text-align: center;
+            }
+
+            .cardFormacao .formacaoDescricao h6{
+                line-height: 5dvw;
+            }
+    
+}

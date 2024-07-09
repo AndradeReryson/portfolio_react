@@ -60,3 +60,29 @@
         height: 33vh;
     }
 
+    @media only screen and (max-width: 480px){
+        .ProjectVisualizer{
+            width: 75vw;
+            height: 40vh;
+            position: relative;
+            align-self: center;
+            justify-self: center;
+        }
+
+            .fundoNotebook{
+                left: 0;
+                top: 0;
+                position: absolute;
+                filter: var(--iconeBranco);
+                width: 75dvw;
+                height: 40dvh;
+            }
+
+            .printProjeto{
+                left: 8.5dvw;
+                top: 2.1dvh;
+                position: absolute;
+                width: 59dvw;
+                height: 27dvh;
+            }
+    }

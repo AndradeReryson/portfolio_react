@@ -98,3 +98,9 @@
         animation: fadeOut 0.5s ease-in-out forwards;
         transition: 1s; 
     }
+
+@media only screen and (max-width: 480px) {
+    .Navbar{
+        display: none;
+    }
+}
